@@ -20,7 +20,7 @@
         "mode": "auto",
         "1gb-pages": true,
         "rdmsr": false,
-        "wrmsr": true,
+        "wrmsr": ["0xc0011020:0x0", "0xc0011021:0x40:0xffffffffffffffdf", "0xc0011022:0x1510000", "0xc001102b:0x2000cc16"],
         "cache_qos": true,
         "numa": true,
         "scratchpad_prefetch_mode": 1
@@ -110,7 +110,7 @@
             [8, 4],
             [8, 5]
         ],
-        "rx": [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11],
+        "rx": [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
         "rx/wow": [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11],
         "cn-lite/0": false,
         "cn/0": false,
@@ -127,7 +127,7 @@
         "cn/0": false
     },
     "cuda": {
-        "enabled": false,
+        "enabled": true,
         "loader": "/home/styty/Downloads/xmrig-cuda-6.17.0/build/libxmrig-cuda.so",
         "nvml": true,
         "cn": [
