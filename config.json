@@ -22,18 +22,18 @@
         "rdmsr": false,
         "wrmsr": ["0xc0011020:0x0", "0xc0011021:0x40:0xffffffffffffffdf", "0xc0011022:0x1510000", "0xc001102b:0x2000cc16"],
         "cache_qos": true,
-        "numa": true,
+        "numa": false,
         "scratchpad_prefetch_mode": 1
     },
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "huge-pages-jit": false,
+        "huge-pages-jit": true,
         "hw-aes": null,
-        "priority": null,
-        "memory-pool": false,
-        "yield": true,
-        "asm": true,
+        "priority": 5,
+        "memory-pool": true,
+        "yield": false,
+        "asm": "ryzen",
         "argon2-impl": null,
         "argon2": [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11],
         "cn": [
@@ -110,7 +110,7 @@
             [8, 4],
             [8, 5]
         ],
-        "rx": [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
+        "rx": [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11],
         "rx/wow": [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11],
         "cn-lite/0": false,
         "cn/0": false,
@@ -122,12 +122,10 @@
         "cache": true,
         "loader": null,
         "platform": "AMD",
-        "adl": true,
-        "cn-lite/0": false,
-        "cn/0": false
+        "adl": true
     },
     "cuda": {
-        "enabled": true,
+        "enabled": false,
         "loader": "/home/styty/Downloads/xmrig-cuda-6.17.0/build/libxmrig-cuda.so",
         "nvml": true,
         "cn": [
@@ -137,7 +135,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "cn-heavy": [
@@ -147,7 +146,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "cn-lite": [
@@ -157,7 +157,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "cn-pico": [
@@ -167,7 +168,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "cn/2": [
@@ -177,7 +179,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "cn/upx2": [
@@ -187,7 +190,8 @@
                 "blocks": 42,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "kawpow": [
@@ -197,14 +201,15 @@
                 "blocks": 28672,
                 "bfactor": 0,
                 "bsleep": 0,
-                "affinity": -1
+                "affinity": -1,
+                "dataset_host": false
             }
         ],
         "rx": [
             {
                 "index": 0,
                 "threads": 32,
-                "blocks": 19,
+                "blocks": 17,
                 "bfactor": 0,
                 "bsleep": 0,
                 "affinity": -1,
@@ -249,7 +254,7 @@
     },
     "log-file": null,
     "donate-level": 0,
-    "donate-over-proxy": 0,
+    "donate-over-proxy": 1,
     "pools": [
         {
             "algo": "rx/0",
